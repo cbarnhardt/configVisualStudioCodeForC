@@ -145,3 +145,19 @@ Clicking debug after should bring up the debug interface and the program should 
 
 ### 6. Dealing with multi-file projects
 ---
+
+I have added two new files to the project, test.c and test.h. 
+I have defined a function called printTest(), within the header and will call it from main to demonstrate.
+To ensure we build correctly we must do the following.
+
+![image](https://github.com/user-attachments/assets/5a02e507-a6b1-4026-9085-a37ba62ce71b)
+
+Open CMakeLists.txt and add the name of the additional c file you want to compile. 
+
+![image](https://github.com/user-attachments/assets/35ec0126-ab34-494b-a940-60e124bc2f20)
+
+Include your new header and call the function...
+Then build the project and run. The key thing is to update CMakeLists.txt with your new .c files.
+It is possible you make need to clean reconfigure and clean build the project, but in this case it 
+worked without taking those steps.
+
